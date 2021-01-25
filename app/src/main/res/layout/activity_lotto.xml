@@ -21,6 +21,7 @@
             android:background="@drawable/yellow"
             android:gravity="center"
             android:text="大樂透專區"
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="40dp" />
 
@@ -240,6 +241,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="01"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"
                     android:onClick="btn1"/>
 
                 <Button
@@ -248,6 +251,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="02"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"
                     android:onClick="btn2"/>
 
                 <Button
@@ -256,6 +261,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="03"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"
                     android:onClick="btn3"/>
 
                 <Button
@@ -264,6 +271,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="04"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"
                     android:onClick="btn4"/>
 
                 <Button
@@ -272,6 +281,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="05"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"
                     android:onClick="btn5"/>
 
                 <Button
@@ -280,6 +291,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="06"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"
                     android:onClick="btn6"/>
 
                 <Button
@@ -288,6 +301,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="07"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"
                     android:onClick="btn7"/>
             </LinearLayout>
         </LinearLayout>
@@ -307,49 +322,63 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="08" />
+                    android:text="08"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="09" />
+                    android:text="09"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="10" />
+                    android:text="10"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="11" />
+                    android:text="11"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="12" />
+                    android:text="12"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="13" />
+                    android:text="13"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="14" />
+                    android:text="14"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -368,49 +397,63 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="15" />
+                    android:text="15"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="16" />
+                    android:text="16"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="17" />
+                    android:text="17"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="18" />
+                    android:text="18"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="19" />
+                    android:text="19"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="20" />
+                    android:text="20"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="21" />
+                    android:text="21"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -429,49 +472,65 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="22" />
+                    android:text="22"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn23"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="23" />
+                    android:text="23"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="24" />
+                    android:text="24"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="25" />
+                    android:text="25"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="26" />
+                    android:text="26"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn27"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="27" />
+                    android:text="27"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/btn28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="28" />
+                    android:text="28"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -479,18 +538,224 @@
             android:layout_height="40dp"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="29"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="30"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="31"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="32"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="33"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="34"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="35"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="36"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="37"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="38"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="39"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="40"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="41"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="42"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="43"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="44"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="45"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="46"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="47"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="48"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btn49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="49"
+                    android:background="@drawable/welocome_button"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -503,10 +768,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:background="@drawable/shape"
+            android:background="@drawable/welocome_button"
             android:onClick="lotty"
             android:text="樂透開獎"
-            android:textColor="#3F51B5"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:textSize="30dp"
              />
 

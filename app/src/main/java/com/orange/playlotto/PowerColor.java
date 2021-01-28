@@ -40,14 +40,14 @@ public class PowerColor extends AppCompatActivity {
 
     }
 
-    public void power_color(View view) {/**大樂透按鈕*/
+    public void power_color(View view) {/**威力彩按鈕*/
         HashSet<Integer> set = new HashSet<>();/**HashSet內容不重複特性*/
         while (set.size() < 7) {
-            set.add( (int) (Math.random() * 38 + 1) );/**取49亂數*/
+            set.add( (int) (Math.random() * 38 + 1) );/**取1~38亂數*/
         }
 
         int i = 0;
-        int[] power_color = new int[7];/**38選6*/
+        int[] power_color = new int[7];
         for (Integer num : set) {
             power_color[i] = num;
             i++;
@@ -58,17 +58,8 @@ public class PowerColor extends AppCompatActivity {
         open_powernum4.setText( "" + power_color[3] );
         open_powernum5.setText( "" + power_color[4] );
         open_powernum6.setText( "" + power_color[5] );
-
-        while (set.size() < 1) {
-            set.add( (int) (Math.random() * 8 + 1) );/**取8亂數*/
-        }
-        int x = 0;
-        int[] power_color_speial = new int[1];/**特別號號碼*/
-        for (Integer num_speial : set) {
-            power_color_speial[i] = num_speial;
-            x++;
-        }
         open_powernum7.setText( "" + power_color[6] );
+
     }
 
     public void onClick_btn(View view) {
@@ -187,43 +178,12 @@ public class PowerColor extends AppCompatActivity {
             case R.id.btn38:
                 ball_num = "38";
                 break;
-            case R.id.btn39:
-                ball_num = "39";
-                break;
-            case R.id.btn40:
-                ball_num = "40";
-                break;
-            case R.id.btn41:
-                ball_num = "41";
-                break;
-            case R.id.btn42:
-                ball_num = "42";
-                break;
-            case R.id.btn43:
-                ball_num = "43";
-                break;
-            case R.id.btn44:
-                ball_num = "44";
-                break;
-            case R.id.btn45:
-                ball_num = "45";
-                break;
-            case R.id.btn46:
-                ball_num = "46";
-                break;
-            case R.id.btn47:
-                ball_num = "47";
-                break;
-            case R.id.btn48:
-                ball_num = "48";
-                break;
-            case R.id.btn49:
-                ball_num = "49";
+
         }
-        if (count <= 6) {/**當自選號小於6的時候*/
+        if (count <= 6) {/**當自選號小於6個的時候*/
             count = count + 1;/**數字累加*/
             array_choose[name_count].setText( ball_num );
-            name_count = name_count + 1;
+            name_count  ++ ;
         } else if (count > 6) {
             Toast.makeText( this, "您已選擇完畢", Toast.LENGTH_SHORT ).show();/**訊息提示完成，可以啟動了*/
         }
@@ -233,7 +193,7 @@ public class PowerColor extends AppCompatActivity {
      * clear_button清除為0，預設0
      */
     public void clear_button(View view) {
-        count = 0;
+        count = 1;
         name_count = 0;
         array_choose[0].setText( "0" );
         array_choose[1].setText( "0" );
@@ -241,5 +201,6 @@ public class PowerColor extends AppCompatActivity {
         array_choose[3].setText( "0" );
         array_choose[4].setText( "0" );
         array_choose[5].setText( "0" );
+        array_choose[6].setText( "0" );
     }
 }

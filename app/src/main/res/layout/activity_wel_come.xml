@@ -75,6 +75,7 @@
             android:layout_weight="1"
             android:background="@drawable/welocome_button"
             android:text="大樂透"
+            android:textColor="@color/black"
             android:textSize="40dp"
             android:onClick="lotto"/>
 
@@ -89,8 +90,9 @@
             android:layout_weight="1"
             android:background="@drawable/welocome_button"
             android:text="威力彩"
+            android:textColor="@color/black"
             android:textSize="40dp"
-            android:onClick="Powercolor"/>
+            android:onClick="PowerColor"/>
 
     </LinearLayout>
 

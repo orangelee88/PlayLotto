@@ -22,9 +22,9 @@ public class WelCome extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void Powercolor(View view) {
-        Intent intent = new Intent();
-        intent.setClass(WelCome.this, PowerColor.class);
-        startActivity(intent);
+    public void PowerColor(View view) {
+        Intent intent2 = new Intent();
+        intent2.setClass(WelCome.this, PowerColor.class);
+        startActivity(intent2);
     }
 }

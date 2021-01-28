@@ -213,11 +213,8 @@ public class Lotto extends AppCompatActivity {
         if (count <= 6) {/**當自選號小於6的時候*/
             count = count + 1;/**數字累加*/
             array_choose[name_count].setText( ball_num );
-            name_count = name_count + 1;
-        }else if (count < 6){
-            Toast.makeText( this, "您還未選滿6個號碼", Toast.LENGTH_SHORT ).show();/**訊息提示完成，可以啟動了*/
-        }
-        else if (count > 6){
+            name_count ++ ;
+        } else if (count > 6) {
             Toast.makeText( this, "您已選擇完畢", Toast.LENGTH_SHORT ).show();/**訊息提示完成，可以啟動了*/
         }
     }
@@ -226,7 +223,8 @@ public class Lotto extends AppCompatActivity {
      * clear_button清除為0，預設0
      */
     public void clear_button(View view) {
-        count = 0;
+        count = 1;
+        name_count = 0;
         array_choose[0].setText( "0" );
         array_choose[1].setText( "0" );
         array_choose[2].setText( "0" );

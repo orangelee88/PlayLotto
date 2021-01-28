@@ -1,22 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape>
-            <gradient
-                android:id="@+id/shape"
-                android:startColor="#FD0909"
-                android:endColor="#E91E63"
-                android:angle="270" />
-            <corners android:radius="900dp"/>
-            <padding
-                android:left="10dp"
-                android:top="10dp"
-                android:right="10dp"
-                android:bottom="10dp" />
-        </shape>
-    </item>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 是否已被按下 -->
+<item android:state_pressed="true"
+    android:drawable="@color/red" />
+    <!-- 未被按下狀態-->
+<item android:drawable="@color/teal_700" />
 </selector>
-
 

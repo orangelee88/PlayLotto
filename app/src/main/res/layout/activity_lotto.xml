@@ -155,7 +155,7 @@
 
                 <TextView
                     android:id="@+id/choose_lottonum1"
-                    android:layout_width="47dp"
+                    android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:background="@drawable/orange"
                     android:gravity="center"
@@ -166,8 +166,8 @@
                 ＿
                 <TextView
                     android:id="@+id/choose_lottonum2"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/orange"
                     android:gravity="center"
                     android:text="0"
@@ -176,8 +176,8 @@
 
                 <TextView
                     android:id="@+id/choose_lottonum3"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/orange"
                     android:gravity="center"
                     android:text="0"
@@ -186,8 +186,8 @@
 
                 <TextView
                     android:id="@+id/choose_lottonum4"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/orange"
                     android:gravity="center"
                     android:text="0"
@@ -196,8 +196,8 @@
 
                 <TextView
                     android:id="@+id/choose_lottonum5"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/orange"
                     android:gravity="center"
                     android:text="0"
@@ -206,8 +206,8 @@
 
                 <TextView
                     android:id="@+id/choose_lottonum6"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/orange"
                     android:gravity="center"
                     android:text="0"
@@ -826,6 +826,8 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             />
 
     </LinearLayout>

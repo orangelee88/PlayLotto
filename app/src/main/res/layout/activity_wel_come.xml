@@ -33,6 +33,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-thin"
                 android:gravity="center"
                 android:text="玩~樂透"
                 android:textColor="@color/black"
@@ -52,7 +53,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="350dp"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="2dp"
         android:orientation="vertical">
@@ -74,17 +75,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textSize="35dp"
-            android:textStyle="bold"
+            android:text="請選擇您要的項目"
             android:textColor="@color/black"
-            android:text="請選擇您要的項目" />
+            android:textSize="35dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <Button
             android:id="@+id/W_lotto"
@@ -96,10 +98,10 @@
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:background="@drawable/welocome_button"
+            android:onClick="lotto"
             android:text="大樂透"
             android:textColor="@color/black"
-            android:textSize="40dp"
-            android:onClick="lotto"/>
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/W_power"
@@ -111,10 +113,10 @@
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:background="@drawable/welocome_button"
+            android:onClick="PowerColor"
             android:text="威力彩"
             android:textColor="@color/black"
-            android:textSize="40dp"
-            android:onClick="PowerColor"/>
+            android:textSize="40dp" />
 
     </LinearLayout>
 

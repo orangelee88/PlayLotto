@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:orientation="vertical">
 
         <TextView
@@ -38,7 +38,7 @@
             <TextView
                 android:id="@+id/tv1"
                 android:layout_width="85dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:gravity="center"
                 android:text="開獎結果"
                 android:layout_marginLeft="15dp"
@@ -52,8 +52,8 @@
 
                 <TextView
                     android:id="@+id/open_powernum1"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="15dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
@@ -63,8 +63,8 @@
 
                 <TextView
                     android:id="@+id/open_powernum2"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
                     android:text="0"
@@ -73,8 +73,8 @@
 
                 <TextView
                     android:id="@+id/open_powernum3"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
                     android:text="0"
@@ -83,8 +83,8 @@
 
                 <TextView
                     android:id="@+id/open_powernum4"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
                     android:text="0"
@@ -93,8 +93,8 @@
 
                 <TextView
                     android:id="@+id/open_powernum5"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
                     android:text="0"
@@ -103,8 +103,8 @@
 
                 <TextView
                     android:id="@+id/open_powernum6"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
                     android:text="0"
@@ -113,8 +113,8 @@
 
                 <TextView
                     android:id="@+id/open_powernum7"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/graypoint"
                     android:gravity="center"
                     android:text="0"
@@ -142,7 +142,7 @@
             <TextView
                 android:id="@+id/tv2"
                 android:layout_width="310dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:gravity="center"
                 android:text="自選組合(特別號只有1 ~ 8號歐)"
                 android:textColor="@color/black"
@@ -155,8 +155,8 @@
 
                 <TextView
                     android:id="@+id/choose_powernum1"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="15dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
@@ -168,8 +168,8 @@
 
                 <TextView
                     android:id="@+id/choose_powernum2"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
                     android:text="0"
@@ -178,8 +178,8 @@
 
                 <TextView
                     android:id="@+id/choose_powernum3"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
                     android:text="0"
@@ -188,8 +188,8 @@
 
                 <TextView
                     android:id="@+id/choose_powernum4"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
                     android:text="0"
@@ -198,8 +198,8 @@
 
                 <TextView
                     android:id="@+id/choose_powernum5"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
                     android:text="0"
@@ -208,8 +208,8 @@
 
                 <TextView
                     android:id="@+id/choose_powernum6"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/red_point"
                     android:gravity="center"
                     android:text="0"
@@ -218,8 +218,8 @@
 
                 <TextView
                     android:id="@+id/choose_powernum7"
-                    android:layout_width="47dp"
-                    android:layout_height="47dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:background="@drawable/graypoint"
                     android:gravity="center"
                     android:text="0"
@@ -233,7 +233,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="260dp"
         android:orientation="vertical">
 
 

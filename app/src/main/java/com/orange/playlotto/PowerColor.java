@@ -30,20 +30,20 @@ public class PowerColor extends AppCompatActivity {
         open_powernum5 = findViewById( R.id.open_powernum5 );
         open_powernum6 = findViewById( R.id.open_powernum6 );
         open_powernum7 = findViewById( R.id.open_powernum7 );
-        array_choose[0] = findViewById( R.id.choose_lottonum1 );
-        array_choose[1] = findViewById( R.id.choose_lottonum2 );
-        array_choose[2] = findViewById( R.id.choose_lottonum3 );
-        array_choose[3] = findViewById( R.id.choose_lottonum4 );
-        array_choose[4] = findViewById( R.id.choose_lottonum5 );
-        array_choose[5] = findViewById( R.id.choose_lottonum6 );
-        array_choose[6] = findViewById( R.id.choose_lottonum6 );
+        array_choose[0] = findViewById( R.id.choose_powernum1 );
+        array_choose[1] = findViewById( R.id.choose_powernum2 );
+        array_choose[2] = findViewById( R.id.choose_powernum3 );
+        array_choose[3] = findViewById( R.id.choose_powernum4 );
+        array_choose[4] = findViewById( R.id.choose_powernum5 );
+        array_choose[5] = findViewById( R.id.choose_powernum6 );
+        array_choose[6] = findViewById( R.id.choose_powernum7 );
 
     }
 
     public void power_color(View view) {/**威力彩按鈕*/
         HashSet<Integer> set = new HashSet<>();/**HashSet內容不重複特性*/
         while (set.size() < 7) {
-            set.add( (int) (Math.random() * 38 + 1) );/**取1~38亂數*/
+            set.add( (int) (Math.random() * 39 + 1) );/**取1~38亂數*/
         }
 
         int i = 0;
@@ -52,13 +52,14 @@ public class PowerColor extends AppCompatActivity {
             power_color[i] = num;
             i++;
         }
+        int power_color_end = (int) (Math.random() * 9 + 1);/**特別號8選1*/
         open_powernum1.setText( "" + power_color[0] );
         open_powernum2.setText( "" + power_color[1] );
         open_powernum3.setText( "" + power_color[2] );
         open_powernum4.setText( "" + power_color[3] );
         open_powernum5.setText( "" + power_color[4] );
         open_powernum6.setText( "" + power_color[5] );
-        open_powernum7.setText( "" + power_color[6] );
+        open_powernum7.setText( "" +  power_color_end );
 
     }
 
@@ -180,17 +181,17 @@ public class PowerColor extends AppCompatActivity {
                 break;
 
         }
-        if (count <= 6) {/**當自選號小於6個的時候*/
-            count = count + 1;/**數字累加*/
+        if (count <= 7) {/**當自選號小於6個的時候,數字累加*/
+            count = count + 1;
             array_choose[name_count].setText( ball_num );
             name_count  ++ ;
-        } else if (count > 6) {
+        } else if (count > 7) {
             Toast.makeText( this, "您已選擇完畢", Toast.LENGTH_SHORT ).show();/**訊息提示完成，可以啟動了*/
         }
     }
 
     /**
-     * clear_button清除為0，預設0
+     * clear_button清除為0，預設所有值為0
      */
     public void clear_button(View view) {
         count = 1;

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Context;
 
 import java.util.HashSet;
 
@@ -17,6 +18,8 @@ public class Lotto extends AppCompatActivity {
     private int count = 1;
     private int name_count = 0;
     private String ball_num = "0";
+    private ShowToast showToast = new ShowToast();
+    private  Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +42,10 @@ public class Lotto extends AppCompatActivity {
 
     }
 
-    public void lotty(View view) {/**大樂透按鈕*/
-        HashSet<Integer> set = new HashSet<>();/**HashSet內容不重複特性*/
+    public void lotty(View view) {/**大樂透開獎按鈕*/
+        HashSet<Integer> set = new HashSet<>();/**使用HashSet內容不重複特性*/
         while (set.size() < 7) {
-            set.add( (int) (Math.random() * 49 + 1) );/**取49亂數*/
+            set.add( (int) (Math.random() * 49 + 1) );/**大樂透取49亂數*/
         }
 
         int i = 0;
@@ -215,14 +218,14 @@ public class Lotto extends AppCompatActivity {
         if (count <= 6) {/**當自選號小於6的時候*/
             if (ball_num.equals( array_choose[0].getText() ) || ball_num.equals( array_choose[1].getText() ) || ball_num.equals( array_choose[2].getText() )
                     || ball_num.equals( array_choose[3].getText() ) || ball_num.equals( array_choose[4].getText() ) || ball_num.equals( array_choose[5].getText() )) {
-                Toast.makeText( this, "您複選擇號碼", Toast.LENGTH_SHORT ).show();
+                showToast.showToastOne(Lotto.this, "您選擇號碼重複" );
             } else {
-                count = count + 1;/**數字累加*/
+                count = count + 1;/**號碼數累加*/
                 array_choose[name_count].setText( ball_num );
                 name_count++;
             }
         } else if (count > 6) {
-            Toast.makeText( this, "您已選擇完畢", Toast.LENGTH_SHORT ).show();/**訊息提示完成，可以啟動了*/
+            showToast.showToastOne(Lotto.this, "您已選擇完畢" );
         }
     }
 

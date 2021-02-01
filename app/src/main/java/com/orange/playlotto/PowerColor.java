@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Context;
 
 import java.util.HashSet;
 
@@ -17,6 +18,8 @@ public class PowerColor extends AppCompatActivity {
     private int count = 1;
     private int name_count = 0;
     private String ball_num = "0";
+    private ShowToast showToast = new ShowToast();
+    private  Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -181,17 +184,17 @@ public class PowerColor extends AppCompatActivity {
                 break;
 
         }
-        if (count <= 6) {/**當自選號小於6的時候*/
+        if (count <= 7) {/**當自選號小於7個的時候*/
             if (ball_num.equals( array_choose[0].getText() ) || ball_num.equals( array_choose[1].getText() ) || ball_num.equals( array_choose[2].getText() )
                     || ball_num.equals( array_choose[3].getText() ) || ball_num.equals( array_choose[4].getText() ) || ball_num.equals( array_choose[5].getText() )) {
-                Toast.makeText( this, "您重複選擇號碼", Toast.LENGTH_SHORT ).show();
+                showToast.showToastOne(PowerColor.this, "您選擇號碼重複" );
             } else {
                 count = count + 1;/**數字累加*/
                 array_choose[name_count].setText( ball_num );
                 name_count++;
             }
-        } else if (count > 6) {
-            Toast.makeText( this, "您已選擇完畢", Toast.LENGTH_SHORT ).show();/**訊息提示完成，可以啟動了*/
+        } else if (count > 7) {
+            showToast.showToastOne(PowerColor.this, "您已選擇完畢" );/**訊息提示完成，可以啟動了*/
         }
     }
     /**

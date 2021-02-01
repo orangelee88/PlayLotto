@@ -52,7 +52,7 @@ public class PowerColor extends AppCompatActivity {
             power_color[i] = num;
             i++;
         }
-        int power_color_end = (int) (Math.random() * 9 + 1);/**特別號8選1*/
+        int power_color_end = (int) (Math.random() * 8 + 1);/**特別號8選1*/
         open_powernum1.setText( "" + power_color[0] );
         open_powernum2.setText( "" + power_color[1] );
         open_powernum3.setText( "" + power_color[2] );
@@ -66,31 +66,31 @@ public class PowerColor extends AppCompatActivity {
     public void onClick_btn(View view) {
         switch (view.getId()) {
             case R.id.btn1:
-                ball_num = "01";
+                ball_num = "1";
                 break;
             case R.id.btn2:
-                ball_num = "02";
+                ball_num = "2";
                 break;
             case R.id.btn3:
-                ball_num = "03";
+                ball_num = "3";
                 break;
             case R.id.btn4:
-                ball_num = "04";
+                ball_num = "4";
                 break;
             case R.id.btn5:
-                ball_num = "05";
+                ball_num = "5";
                 break;
             case R.id.btn6:
-                ball_num = "06";
+                ball_num = "6";
                 break;
             case R.id.btn7:
-                ball_num = "07";
+                ball_num = "7";
                 break;
             case R.id.btn8:
-                ball_num = "08";
+                ball_num = "8";
                 break;
             case R.id.btn9:
-                ball_num = "09";
+                ball_num = "9";
                 break;
             case R.id.btn10:
                 ball_num = "10";
@@ -181,15 +181,19 @@ public class PowerColor extends AppCompatActivity {
                 break;
 
         }
-        if (count <= 7) {/**當自選號小於6個的時候,數字累加*/
-            count = count + 1;
-            array_choose[name_count].setText( ball_num );
-            name_count  ++ ;
-        } else if (count > 7) {
+        if (count <= 6) {/**當自選號小於6的時候*/
+            if (ball_num.equals( array_choose[0].getText() ) || ball_num.equals( array_choose[1].getText() ) || ball_num.equals( array_choose[2].getText() )
+                    || ball_num.equals( array_choose[3].getText() ) || ball_num.equals( array_choose[4].getText() ) || ball_num.equals( array_choose[5].getText() )) {
+                Toast.makeText( this, "您重複選擇號碼", Toast.LENGTH_SHORT ).show();
+            } else {
+                count = count + 1;/**數字累加*/
+                array_choose[name_count].setText( ball_num );
+                name_count++;
+            }
+        } else if (count > 6) {
             Toast.makeText( this, "您已選擇完畢", Toast.LENGTH_SHORT ).show();/**訊息提示完成，可以啟動了*/
         }
     }
-
     /**
      * clear_button清除為0，預設所有值為0
      */

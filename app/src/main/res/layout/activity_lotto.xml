@@ -163,7 +163,7 @@
                     android:textColor="@color/white"
                     android:textSize="26dp"
                     android:layout_marginLeft="15dp"/>
-                ＿
+
                 <TextView
                     android:id="@+id/choose_lottonum2"
                     android:layout_width="45dp"

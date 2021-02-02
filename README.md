@@ -1,15 +1,15 @@
 # PlayLotto
 ![image](https://github.com/orangelee88/PlayLotto/blob/master/Play_Lotto.gif)
 ## Usage
-If you want to test the lotto game, you can use the app here.
+If you want to test the lotto game, you can use the app here. Others also have power color to play.
 
 ## By
-Developer: OrangeLee
+Developer:  [OrangeLee](https://github.com/orangelee88)
 
 Technical support: [NevioHuang](https://github.com/Ramphastos)
 
 
-Designer: OrangeLee
+Designer: [OrangeLee](https://github.com/orangelee88)
 
 ## Lotto random of code
  ```Android

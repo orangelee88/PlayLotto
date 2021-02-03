@@ -20,6 +20,7 @@ public class PowerColor extends AppCompatActivity {
     private String ball_num = "0";
     private ShowToast showToast = new ShowToast();
     private  Context context;
+    private int tempNum;//交換數字暫存用
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,15 @@ public class PowerColor extends AppCompatActivity {
             power_color[i] = num;
             i++;
         }
+        for (int k=0; k<6; k++)/**Bubble_Sort排序*/
+            for (int j=k+1; j<7; j++)
+                // 改變下式中的大、小於符號可變更排列順序,< 由小到大排列>
+                if(power_color[k]>power_color[j])
+                {
+                    tempNum=power_color[k];
+                    power_color[k]=power_color[j];
+                    power_color[j]=tempNum;
+                }
         int power_color_end = (int) (Math.random() * 8 + 1);/**特別號8選1*/
         open_powernum1.setText( "" + power_color[0] );
         open_powernum2.setText( "" + power_color[1] );

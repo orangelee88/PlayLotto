@@ -20,6 +20,7 @@ public class Lotto extends AppCompatActivity {
     private String ball_num = "0";
     private ShowToast showToast = new ShowToast();
     private  Context context;
+    private int tempNum;//交換數字暫存用
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,17 @@ public class Lotto extends AppCompatActivity {
             lottery[i] = num;
             i++;
         }
+
+        for (int k=0; k<6; k++)/**Bubble_Sort排序*/
+            for (int j=k+1; j<7; j++)
+                // 改變下式中的大、小於符號可變更排列順序,< 由小到大排列>
+                if(lottery[k]>lottery[j])
+                {
+                    tempNum=lottery[k];
+                    lottery[k]=lottery[j];
+                    lottery[j]=tempNum;
+                }
+
         open_lottonum1.setText( "" + lottery[0] );
         open_lottonum2.setText( "" + lottery[1] );
         open_lottonum3.setText( "" + lottery[2] );

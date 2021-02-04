@@ -15,7 +15,7 @@ public class Lotto extends AppCompatActivity {
     private TextView open_lottonum1, open_lottonum2, open_lottonum3, open_lottonum4, open_lottonum5, open_lottonum6, open_lottonum7;
     private TextView choose_lottonum1, choose_lottonum2, choose_lottonum3, choose_lottonum4, choose_lottonum5, choose_lottonum6;
     private TextView[] array_choose = {choose_lottonum1, choose_lottonum2, choose_lottonum3, choose_lottonum4, choose_lottonum5, choose_lottonum6};
-    private int count = 1, count_add = 0;//count_add 用來儲存自選號碼用
+    private int count = 1, count_add = 0;//count_add 儲存自選號碼中獎用
     private int name_count = 0;
     private String ball_num = "0";
     private ShowToast showToast = new ShowToast();
@@ -81,47 +81,51 @@ public class Lotto extends AppCompatActivity {
         open_lottonum7.setText( "" + lottery[6] );
         for (int open = 0; open < 7; open++) {/**比對中獎號碼*/
             for (int choose = 0; choose < 6; choose++) {/**自選號碼*/
-                if (lottery[open] == choose_lottery[choose]) {
+                if (lottery[open] == choose_lottery[choose]) {/**自選號碼=開獎號碼的時候*/
                     count_add = count_add + 1;/**有對中號碼+1*/
                 }
             }
         }
         switch (count_add) {
+            case 0:
+                showToast.showToastOne( Lotto.this, "1個號碼都沒有中，殘念" );
+                break;
             case 1:
-                showToast.showToastOne( Lotto.this, "您沒中獎" );
+                showToast.showToastOne( Lotto.this, "只中1個號碼，您沒中獎" );
                 break;
             case 2:
-                showToast.showToastOne( Lotto.this, "您.沒中獎" );
+                showToast.showToastOne( Lotto.this, "只中2個號碼，您沒中獎" );
                 break;
             case 3:
                 if (count_add == 3) {
-                    showToast.showToastOne( Lotto.this, "您中普獎，400元" );
+                    showToast.showToastOne( Lotto.this, "您中3個號碼，普獎400元" );
                 } else {
-                    showToast.showToastOne( Lotto.this, "您中柒獎，400元" );
+                    showToast.showToastOne( Lotto.this, "您中3個號碼+特別號，柒獎400元" );
                 }
                 break;
             case 4:
                 if (count_add == 4) {
-                    showToast.showToastOne( Lotto.this, "您中伍獎，2000元" );
+                    showToast.showToastOne( Lotto.this, "您中4個號碼，伍獎2000元" );
                 } else {
-                    showToast.showToastOne( Lotto.this, "您中陸獎，1000元" );
+                    showToast.showToastOne( Lotto.this, "您中3個號碼+特別號，陸獎1000元" );
                 }
                 break;
             case 5:
                 if (count_add == 5) {
-                    showToast.showToastOne( Lotto.this, "您中參獎" );
+                    showToast.showToastOne( Lotto.this, "您中5個號碼，您中參獎" );
                 } else {
-                    showToast.showToastOne( Lotto.this, "您中肆獎" );
+                    showToast.showToastOne( Lotto.this, "您中4個號碼+特別號，您中肆獎" );
                 }
                 break;
             case 6:
                 if (count_add == 6) {
-                    showToast.showToastOne( Lotto.this, "恭喜，您中頭獎了" );
+                    showToast.showToastOne( Lotto.this, "恭喜您中6個號碼，您中頭獎了" );
                 } else {
-                    showToast.showToastOne( Lotto.this, "您中貳獎" );
+                    showToast.showToastOne( Lotto.this, "您中5個號碼+特別號，您中貳獎" );
                 }
                 break;
         }
+        count_add=0;
     }
 
     public void onClick_btn(View view) {
@@ -330,7 +334,7 @@ public class Lotto extends AppCompatActivity {
                 showToast.showToastOne( Lotto.this, "您選擇號碼重複" );
             } else {
                 count = count + 1;/**號碼數累加*/
-                choose_lottery[name_count] = choose_num;
+                choose_lottery[name_count] = choose_num;/**自選號碼存入陣列*/
                 array_choose[name_count].setText( ball_num );
                 name_count++;
 
@@ -341,7 +345,7 @@ public class Lotto extends AppCompatActivity {
     }
 
     /**
-     * clear_button清除為0，預設0
+     * clear_button清除，預設為0
      */
     public void clear_button(View view) {
         count = 1;
@@ -352,5 +356,12 @@ public class Lotto extends AppCompatActivity {
         array_choose[3].setText( "0" );
         array_choose[4].setText( "0" );
         array_choose[5].setText( "0" );
+        choose_lottery [0]=0;
+        choose_lottery [1]=0;
+        choose_lottery [2]=0;
+        choose_lottery [3]=0;
+        choose_lottery [4]=0;
+        choose_lottery [5]=0;
+
     }
 }

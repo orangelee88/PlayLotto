@@ -346,6 +346,7 @@ public class Lotto extends AppCompatActivity {
                         tempChooseNum = choose_lottery[a];
                         choose_lottery[a] = choose_lottery[b];
                         choose_lottery[b] = tempChooseNum;
+                        // 觀察陣列 數值變化
                         Log.d( TAG, "CH0=" + choose_lottery[0] );
                         Log.d( TAG, "CH1=" + choose_lottery[1] );
                         Log.d( TAG, "CH2=" + choose_lottery[2] );

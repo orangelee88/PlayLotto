@@ -3,6 +3,7 @@ package com.orange.playlotto;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,9 +19,10 @@ public class PowerColor extends AppCompatActivity {
     private int count = 1, count_add = 0;
     private int name_count = 0;
     private String ball_num = "0";
+    private String TAG = "test";
     private ShowToast showToast = new ShowToast();
     private Context context;
-    private int tempNum;//交換數字暫存用
+    private int tempNum, tempChooseNum;//交換數字暫存用
     private int[] choose_PowerColor = new int[7];
     private int choose_num = 0;//儲存自選號碼用
 
@@ -90,9 +92,9 @@ public class PowerColor extends AppCompatActivity {
                 showToast.showToastOne( PowerColor.this, "只中1個號碼，您沒中獎" );
                 break;
             case 2:
-                if(count_add == 2){
+                if (count_add == 2) {
                     showToast.showToastOne( PowerColor.this, "只中2個號碼，您沒中獎" );
-                }else {
+                } else {
                     showToast.showToastOne( PowerColor.this, "您中1個號碼+特別號，普獎100元" );
                 }
                 break;
@@ -121,7 +123,7 @@ public class PowerColor extends AppCompatActivity {
                 if (count_add == 6) {
                     showToast.showToastOne( PowerColor.this, "恭喜中6個號碼，您中貳獎了!!!" );
                 } else {
-                    showToast.showToastOne( PowerColor.this, "恭喜中5個號碼+特別號，您中參獎了，150000元!!!");
+                    showToast.showToastOne( PowerColor.this, "恭喜中5個號碼+特別號，您中參獎了，150000元!!!" );
                 }
                 break;
             case 7:
@@ -300,6 +302,31 @@ public class PowerColor extends AppCompatActivity {
             }
         } else if (count > 7) {
             showToast.showToastOne( PowerColor.this, "您已選擇完畢" );/**訊息提示完成，可以啟動了*/
+        }
+        if (choose_PowerColor[5] > 0) {
+            for (int a = 0; a < 6; a++)/**Bubble_Sort自選號碼排序*/
+                for (int b = a + 1; b < 6; b++)
+                    // 改變下式中的大、小於符號可變更排列順序,目前使用< 由小到大排列>
+                    if (choose_PowerColor[a] > choose_PowerColor[b]) {
+                        tempChooseNum = choose_PowerColor[a];
+                        choose_PowerColor[a] = choose_PowerColor[b];
+                        choose_PowerColor[b] = tempChooseNum;
+                        // 觀察陣列 數值變化
+                        Log.d( TAG, "CH0=" + choose_PowerColor[0] );
+                        Log.d( TAG, "CH1=" + choose_PowerColor[1] );
+                        Log.d( TAG, "CH2=" + choose_PowerColor[2] );
+                        Log.d( TAG, "CH3=" + choose_PowerColor[3] );
+                        Log.d( TAG, "CH4=" + choose_PowerColor[4] );
+                        Log.d( TAG, "CH5=" + choose_PowerColor[5] );
+                        //目前陣列數值[0]~[5]有出來 可是沒有儲存\進去
+                        array_choose[0].setText( "" + choose_PowerColor[0] );
+                        array_choose[1].setText( "" + choose_PowerColor[1] );
+                        array_choose[2].setText( "" + choose_PowerColor[2] );
+                        array_choose[3].setText( "" + choose_PowerColor[3] );
+                        array_choose[4].setText( "" + choose_PowerColor[4] );
+                        array_choose[5].setText( "" + choose_PowerColor[5] );
+
+                    }
         }
     }
 

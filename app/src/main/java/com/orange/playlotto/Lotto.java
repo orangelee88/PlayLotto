@@ -2,7 +2,9 @@ package com.orange.playlotto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,16 +20,12 @@ public class Lotto extends AppCompatActivity {
     private int count = 1, count_add = 0;//count_add 儲存自選號碼中獎用
     private int name_count = 0;
     private String ball_num = "0";
+    private String TAG = "test";
     private ShowToast showToast = new ShowToast();
     private Context context;
-    private int tempNum;//交換數字暫存用
-    private int[] choose_lottery = new int[6];
+    private int tempNum, tempChooseNum;//交換數字暫存用
+    private int[] choose_lottery = new int[7];//自選6個號碼+1特別號碼的儲存空間
     private int choose_num = 0;//儲存自選號碼用
-
-    /**
-     * 自選6個號碼+1特別號碼的儲存空間
-     */
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +45,6 @@ public class Lotto extends AppCompatActivity {
         array_choose[3] = findViewById( R.id.choose_lottonum4 );
         array_choose[4] = findViewById( R.id.choose_lottonum5 );
         array_choose[5] = findViewById( R.id.choose_lottonum6 );
-
     }
 
     public void lotty(View view) {/**大樂透開獎按鈕*/
@@ -125,7 +122,7 @@ public class Lotto extends AppCompatActivity {
                 }
                 break;
         }
-        count_add=0;
+        count_add = 0;/**中獎計數歸零*/
     }
 
     public void onClick_btn(View view) {
@@ -337,11 +334,35 @@ public class Lotto extends AppCompatActivity {
                 choose_lottery[name_count] = choose_num;/**自選號碼存入陣列*/
                 array_choose[name_count].setText( ball_num );
                 name_count++;
-
             }
         } else if (count > 6) {
             showToast.showToastOne( Lotto.this, "您已選擇完畢" );
         }
+        if (choose_lottery[5] > 0) {
+            for (int a = 0; a < 6; a++)/**Bubble_Sort自選號碼排序*/
+                for (int b = a + 1; b < 6; b++)
+                    // 改變下式中的大、小於符號可變更排列順序,目前使用< 由小到大排列>
+                    if (choose_lottery[a] > choose_lottery[b]) {
+                        tempChooseNum = choose_lottery[a];
+                        choose_lottery[a] = choose_lottery[b];
+                        choose_lottery[b] = tempChooseNum;
+                        Log.d( TAG, "CH0=" + choose_lottery[0] );
+                        Log.d( TAG, "CH1=" + choose_lottery[1] );
+                        Log.d( TAG, "CH2=" + choose_lottery[2] );
+                        Log.d( TAG, "CH3=" + choose_lottery[3] );
+                        Log.d( TAG, "CH4=" + choose_lottery[4] );
+                        Log.d( TAG, "CH5=" + choose_lottery[5] );
+                        //目前陣列數值[0]~[5]有出來 可是沒有儲存\進去
+                        array_choose[0].setText( "" + choose_lottery[0] );
+                        array_choose[1].setText( "" + choose_lottery[1] );
+                        array_choose[2].setText( "" + choose_lottery[2] );
+                        array_choose[3].setText( "" + choose_lottery[3] );
+                        array_choose[4].setText( "" + choose_lottery[4] );
+                        array_choose[5].setText( "" + choose_lottery[5] );
+
+                    }
+        }
+
     }
 
     /**
@@ -356,12 +377,12 @@ public class Lotto extends AppCompatActivity {
         array_choose[3].setText( "0" );
         array_choose[4].setText( "0" );
         array_choose[5].setText( "0" );
-        choose_lottery [0]=0;
-        choose_lottery [1]=0;
-        choose_lottery [2]=0;
-        choose_lottery [3]=0;
-        choose_lottery [4]=0;
-        choose_lottery [5]=0;
+        choose_lottery[0] = 0;
+        choose_lottery[1] = 0;
+        choose_lottery[2] = 0;
+        choose_lottery[3] = 0;
+        choose_lottery[4] = 0;
+        choose_lottery[5] = 0;
 
     }
 }
